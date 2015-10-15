@@ -8,6 +8,10 @@
   + `npm install`
   + `npm run start`
 - open a browser and go to `http://localhost:2368`
+- create a local ghost account and sign in
+- in the admin dashboard...
+  + click general (under SETTINGS)
+  + change the theme to taekimjr (under Theme)
 
 ## Deployment
 - navigate to the project's root directory
