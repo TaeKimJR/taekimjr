@@ -1,16 +1,25 @@
-# Casper
+# Tae Kim JR
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
+The theme for Tae Kim Jr's personal site.
 
-To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
+##Page Contexts
 
-## Copyright & License
+### home.hbs
+Homepage of the entire website. This will be the entry point to all of the portfolio and blog content.
 
-Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT License.
+Portfolio section with links to individual pages (page.hbs).
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+Journal with links to individual posts (post.hbs). There will be functionality to 'see more', which will call jQuery load method (http://api.jquery.com/load/) to grab more posts (/page/2/).
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Contact footer at the bottom.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+### index.hbs
+The structure of this page gives the ability to grab more posts (/page/2).
+example:
+$( "#article-list" ).load( "/page/2 #content" );
+
+### post.hbs
+This will show the individual blog posts.
+
+### page.hbs
+This will show the individual portfolio items.
