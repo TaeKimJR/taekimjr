@@ -14,7 +14,7 @@
   + change the theme to taekimjr (under Theme)
 - start developing!!!
 
-### Grunt Setup
+### Grunt Setup (LESS transpiler)
 - navigate to the theme's root directory (/content/themes/taekimjr/)
 - run the following command if you have never used Grunt before
   + `npm install -g grunt-cli`
