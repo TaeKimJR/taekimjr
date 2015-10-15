@@ -19,6 +19,6 @@
   + `open https://taekimjr.herokuapp.com/`
 
 ## Resources
-http://support.ghost.org/installing-ghost-mac/
-https://www.howtoinstallghost.com/how-to-install-ghost-on-heroku/
-https://github.com/cobyism/ghost-on-heroku
+- http://support.ghost.org/installing-ghost-mac/
+- https://www.howtoinstallghost.com/how-to-install-ghost-on-heroku/
+- https://github.com/cobyism/ghost-on-heroku
