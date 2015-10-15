@@ -3,7 +3,7 @@
 ## Developer Environment Setup
 - clone the git repository (https://github.com/TaeKimJR/taekimjr.git)
 - open terminal
-- navigate to the project's root directory
+- navigate to the project's root directory (where you pulled down the git repository)
 - run the following commands:
   + `npm install`
   + `npm run start`
