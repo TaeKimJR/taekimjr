@@ -12,6 +12,7 @@
 - in the admin dashboard...
   + click general (under SETTINGS)
   + change the theme to taekimjr (under Theme)
+- start developing!!!
 
 ## Deployment
 - navigate to the project's root directory
