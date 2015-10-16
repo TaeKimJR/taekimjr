@@ -1,0 +1,70 @@
+@import "libs/bootstrap-3.3.5/less/bootstrap.less";
+
+@import "partials/home_navigation.less";
+
+@header-bold-font: 'Open Sans';
+
+section {
+  position: relative;
+  display: inline-block;
+
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+h1 {
+  font-family: @header-bold-font, sans-serif;
+  font-size: 5rem;
+  line-height: 90px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: @header-bold-font, sans-serif;
+  font-size: 2rem;
+  line-height: 38px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@hero-bg-image: url("../../images/hero_water_bg.jpeg");
+@hero-text-color: #FFF;
+
+#hero {
+  background:
+    linear-gradient(
+            rgba(0, 91, 146, 0.58),
+            rgba(0, 91, 146, 0.58)
+    ),
+    @hero-bg-image no-repeat center center fixed;
+  background-size: cover;
+
+  .content {
+    position: absolute;
+    text-align: center;
+
+    width: 100%;
+
+    opacity: 0;
+    transition: opacity 1s ease-in;
+
+    h1, h2 {
+      color: @hero-text-color;
+    }
+
+  }
+
+}
+
+

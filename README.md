@@ -38,3 +38,4 @@
 - http://support.ghost.org/
 - https://www.howtoinstallghost.com/how-to-install-ghost-on-heroku/
 - https://github.com/cobyism/ghost-on-heroku
+- https://mixitup.kunkalabs.com/

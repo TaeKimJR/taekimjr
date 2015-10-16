@@ -1,0 +1,53 @@
+@nav-bg-color: #454545;
+@nav-accent-color: #B03D3D;
+@nav-text-color: #737373;
+@nav-link-hover-color: #FFFFFF;
+@nav-menu-button-color: #FFFFFF;
+
+nav {
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+
+  width: 100%;
+  border-top: 3px solid @nav-accent-color;
+
+  background-color: @nav-bg-color;
+
+  button {
+
+    span {
+      color: @nav-menu-button-color;
+    }
+
+  }
+
+  ul {
+    .make-row();
+
+    text-align: center;
+
+    margin: 0 auto 1rem;
+    width: 30rem;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      .make-sm-column(4);
+
+      a {
+        color: @nav-text-color;
+
+        text-decoration: none;
+
+        &:hover {
+          color: @nav-link-hover-color;
+          background-color: transparent !important;
+        }
+      }
+
+    }
+
+  }
+
+}
