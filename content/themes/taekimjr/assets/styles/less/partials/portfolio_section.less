@@ -1,0 +1,62 @@
+#portfolio {
+
+  .filters-container {
+    .make-row();
+
+    max-width: 50rem;
+    margin-bottom: @standard-spacing;
+    margin-left: auto;
+    margin-right: auto;
+
+    >div {
+      .make-xs-column(3);
+
+      text-align: center;
+
+      border: 1px solid transparent;
+      padding: 0;
+
+      cursor: pointer;
+
+      &:hover {
+        border: 1px solid black;
+      }
+
+      &.active {
+        border: 1px solid black;
+      }
+
+      &.no-border {
+        border: 1px solid transparent;
+      }
+
+
+    }
+  }
+
+
+  .portfolio-container {
+    .section-container();
+
+    font-size: 0;   // remove white space (display: inline-block issue)
+
+    >div {
+      position: relative;
+
+      border: 2px solid white;
+      width: 50%;
+
+      background-color: @primary-color;
+
+      font-size: 1rem;
+
+      .aspect-ratio {
+        margin-top: 100%;
+      }
+    }
+
+    .mix {            // mixitup plugin essential CSS
+      display: none;
+    }
+  }
+}

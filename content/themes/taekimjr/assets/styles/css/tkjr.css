@@ -6434,7 +6434,9 @@ button.close {
 .modal-footer:before,
 .modal-footer:after,
 nav ul:before,
-nav ul:after {
+nav ul:after,
+#portfolio .filters-container:before,
+#portfolio .filters-container:after {
   content: " ";
   display: table;
 }
@@ -6453,7 +6455,8 @@ nav ul:after {
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
-nav ul:after {
+nav ul:after,
+#portfolio .filters-container:after {
   clear: both;
 }
 .center-block {
@@ -6699,12 +6702,6 @@ nav ul:after {
     display: none !important;
   }
 }
-section {
-  position: relative;
-  display: inline-block;
-  min-height: 100vh;
-  width: 100%;
-}
 h1,
 h2,
 h3,
@@ -6729,9 +6726,18 @@ a {
 a:hover {
   text-decoration: none;
 }
+section {
+  position: relative;
+  display: inline-block;
+  min-height: 100vh;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 25rem;
+}
 .section-title {
   text-align: center;
-  margin: 25rem auto 0;
+  margin: 0 auto 3rem;
   border-bottom: 2px solid #0b5d89;
   max-width: 35rem;
 }
@@ -6784,6 +6790,7 @@ nav ul li a:hover {
   background-color: transparent !important;
 }
 #hero {
+  padding: 0;
   background: linear-gradient(rgba(0, 91, 146, 0.58), rgba(0, 91, 146, 0.58)), url("../../images/hero_water_bg.jpeg") no-repeat center center fixed;
   background-size: cover;
 }
@@ -6797,4 +6804,106 @@ nav ul li a:hover {
 #hero .content h1,
 #hero .content h2 {
   color: #ffffff;
+}
+#portfolio .filters-container {
+  margin-left: -15px;
+  margin-right: -15px;
+  max-width: 50rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+#portfolio .filters-container > div {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: 0;
+  cursor: pointer;
+}
+#portfolio .filters-container > div:hover {
+  border: 1px solid black;
+}
+#portfolio .filters-container > div.active {
+  border: 1px solid black;
+}
+#portfolio .filters-container > div.no-border {
+  border: 1px solid transparent;
+}
+#portfolio .portfolio-container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75rem;
+  font-size: 0;
+}
+#portfolio .portfolio-container > div {
+  position: relative;
+  border: 2px solid white;
+  width: 50%;
+  background-color: #0b5d89;
+  font-size: 1rem;
+}
+#portfolio .portfolio-container > div .aspect-ratio {
+  margin-top: 100%;
+}
+#portfolio .portfolio-container .mix {
+  display: none;
+}
+#journal .articles-container {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75rem;
+}
+#journal .articles-container article {
+  margin-bottom: 2rem;
+  font-size: 0;
+}
+#journal .articles-container article header {
+  display: inline-block;
+  margin-right: 2%;
+  width: 73%;
+  font-size: 1rem;
+}
+#journal .articles-container article header a {
+  color: black;
+}
+#journal .articles-container article header a:hover {
+  text-decoration: underline;
+}
+#journal .articles-container article .timestamp {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1.5%;
+  width: 25%;
+  font-size: 1.5rem;
+}
+footer {
+  height: 15rem;
+  padding: 3rem;
+  background-color: #0b5d89;
+}
+footer .social-links {
+  text-align: center;
+  max-width: 40rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+}
+footer .social-links a {
+  padding: .5rem;
+}
+footer .social-links a i {
+  color: white;
+  font-size: 4rem;
+}
+footer .contact-info {
+  text-align: center;
+}
+footer .contact-info a {
+  color: white;
+  letter-spacing: .2rem;
 }

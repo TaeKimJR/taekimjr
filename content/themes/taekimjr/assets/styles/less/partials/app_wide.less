@@ -1,13 +1,7 @@
 @header-bold-font: 'Open Sans';
 @primary-color: #0B5D89;
 
-section {
-  position: relative;
-  display: inline-block;
-
-  min-height: 100vh;
-  width: 100%;
-}
+@standard-spacing: 3rem;
 
 h1, h2, h3, h4 {
   margin: 0;
@@ -36,11 +30,21 @@ a {
 
 }
 
+section {
+  position: relative;
+  display: inline-block;
+
+  min-height: 100vh;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 25rem;
+}
 
 .section-title {
   text-align: center;
 
-  margin: 25rem auto 0;
+  margin: 0 auto @standard-spacing;
   border-bottom: 2px solid @primary-color;
   max-width: 35rem;
 
@@ -48,4 +52,10 @@ a {
     font-size: 4rem;
   }
 
+}
+
+.section-container() {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75rem;
 }
