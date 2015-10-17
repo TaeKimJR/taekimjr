@@ -5,7 +5,7 @@
 @nav-menu-button-color: #FFFFFF;
 
 nav {
-  position: absolute;
+  position: fixed;
   display: inline-block;
   z-index: 1;
 
@@ -30,6 +30,11 @@ nav {
     margin: 0 auto 1rem;
     width: 30rem;
     padding: 0;
+
+    @media screen and (max-width: @container-sm) {  // bootstrap LESS variable
+      width: 100%;
+    }
+
 
     li {
       display: inline-block;

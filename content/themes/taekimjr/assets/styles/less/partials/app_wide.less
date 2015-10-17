@@ -1,0 +1,51 @@
+@header-bold-font: 'Open Sans';
+@primary-color: #0B5D89;
+
+section {
+  position: relative;
+  display: inline-block;
+
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+h1 {
+  font-family: @header-bold-font, sans-serif;
+  font-size: 5rem;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: @header-bold-font, sans-serif;
+  font-size: 2rem;
+  line-height: 38px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+}
+
+
+.section-title {
+  text-align: center;
+
+  margin: 25rem auto 0;
+  border-bottom: 2px solid @primary-color;
+  max-width: 35rem;
+
+  h1 {
+    font-size: 4rem;
+  }
+
+}

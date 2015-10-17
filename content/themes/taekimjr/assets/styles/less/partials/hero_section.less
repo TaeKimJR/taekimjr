@@ -1,0 +1,28 @@
+@hero-bg-image: url("../../images/hero_water_bg.jpeg");
+@hero-text-color: #FFF;
+
+#hero {
+  background:
+  linear-gradient(
+          rgba(0, 91, 146, 0.58),
+          rgba(0, 91, 146, 0.58)
+  ),
+  @hero-bg-image no-repeat center center fixed;
+  background-size: cover;
+
+  .content {
+    position: absolute;
+    text-align: center;
+
+    width: 100%;
+
+    opacity: 0;
+    transition: opacity 1s ease-in;
+
+    h1, h2 {
+      color: @hero-text-color;
+    }
+
+  }
+
+}
