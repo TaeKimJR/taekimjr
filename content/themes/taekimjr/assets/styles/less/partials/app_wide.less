@@ -31,9 +31,14 @@ section {
   display: inline-block;
 
   margin-bottom: 25rem;
+  min-height: 100vh;
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
+
+  &:last-child {
+    margin-bottom: 10rem;
+  }
 
   @media screen and (max-width: @container-sm) {  // bootstrap LESS variable
     margin-bottom: 10rem;
