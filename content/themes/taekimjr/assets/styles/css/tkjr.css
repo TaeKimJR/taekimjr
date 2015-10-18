@@ -6717,27 +6717,32 @@ h1 {
 h2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 2rem;
-  line-height: 38px;
   font-weight: 400;
 }
-a {
+a,
+a:visited,
+a:active,
+a:hover,
+a:focus {
   text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
+  background-color: transparent;
 }
 section {
   position: relative;
   display: inline-block;
-  min-height: 100vh;
+  margin-bottom: 25rem;
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 25rem;
+}
+@media screen and (max-width: 750px) {
+  section {
+    padding-top: 10rem;
+  }
 }
 .section-title {
   text-align: center;
-  margin: 0 auto 3rem;
+  margin: 0 auto 4.5rem;
   border-bottom: 2px solid #0b5d89;
   max-width: 35rem;
 }
@@ -6760,7 +6765,7 @@ nav ul {
   margin-right: -15px;
   text-align: center;
   margin: 0 auto 1rem;
-  width: 30rem;
+  width: 45rem;
   padding: 0;
 }
 @media screen and (max-width: 750px) {
@@ -6783,13 +6788,16 @@ nav ul li {
 }
 nav ul li a {
   color: #737373;
-  text-decoration: none;
+  background-color: transparent !important;
+}
+nav ul li a:focus {
+  color: #737373;
 }
 nav ul li a:hover {
   color: #ffffff;
-  background-color: transparent !important;
 }
 #hero {
+  min-height: 100vh;
   padding: 0;
   background: linear-gradient(rgba(0, 91, 146, 0.58), rgba(0, 91, 146, 0.58)), url("../../images/hero_water_bg.jpeg") no-repeat center center fixed;
   background-size: cover;
@@ -6859,7 +6867,7 @@ nav ul li a:hover {
   max-width: 75rem;
 }
 #journal .articles-container article {
-  margin-bottom: 2rem;
+  margin-bottom: 4.5rem;
   font-size: 0;
 }
 #journal .articles-container article header {
@@ -6874,12 +6882,24 @@ nav ul li a:hover {
 #journal .articles-container article header a:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 750px) {
+  #journal .articles-container article header {
+    display: block;
+    width: 100%;
+  }
+}
 #journal .articles-container article .timestamp {
   display: inline-block;
   vertical-align: top;
-  margin-top: 1.5%;
+  margin-top: .5%;
   width: 25%;
   font-size: 1.5rem;
+}
+@media screen and (max-width: 750px) {
+  #journal .articles-container article .timestamp {
+    display: block;
+    width: 100%;
+  }
 }
 footer {
   height: 15rem;
@@ -6894,11 +6914,16 @@ footer .social-links {
   margin-bottom: 1.5rem;
 }
 footer .social-links a {
+  margin-right: 1rem;
   padding: .5rem;
+}
+footer .social-links a:last-child {
+  margin-right: 0;
 }
 footer .social-links a i {
   color: white;
-  font-size: 4rem;
+  font-size: 3rem;
+  transition: color 0.3s;
 }
 footer .contact-info {
   text-align: center;
@@ -6906,4 +6931,7 @@ footer .contact-info {
 footer .contact-info a {
   color: white;
   letter-spacing: .2rem;
+}
+footer .contact-info a:hover {
+  text-decoration: underline;
 }

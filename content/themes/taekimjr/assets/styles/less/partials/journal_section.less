@@ -3,7 +3,7 @@
     .section-container();
 
     article {
-      margin-bottom: 2rem;
+      margin-bottom: @standard-spacing * 1.5;
 
       font-size: 0;
 
@@ -22,16 +22,30 @@
             text-decoration: underline;
           }
         }
+
+        @media screen and (max-width: @container-sm) {  // bootstrap LESS variable
+          display: block;
+
+          width: 100%;
+        }
+
       }
 
       .timestamp {
         display: inline-block;
         vertical-align: top;
-        margin-top: 1.5%;
+        margin-top: .5%;
 
         width: 25%;
 
         font-size: 1.5rem;
+
+        @media screen and (max-width: @container-sm) {  // bootstrap LESS variable
+          display: block;
+
+          width: 100%;
+        }
+
       }
 
     }

@@ -13,12 +13,18 @@ footer {
     margin-bottom: @standard-spacing/2;
 
     a {
+      margin-right: 1rem;
       padding: .5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       i {
         color: white;
 
-        font-size: 4rem;
+        font-size: 3rem;
+        transition: color 0.3s;
       }
 
     }
@@ -32,6 +38,10 @@ footer {
       color: white;
 
       letter-spacing: .2rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
   }

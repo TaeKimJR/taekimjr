@@ -10,6 +10,7 @@
 
     var HERO_SECTION_SELECTOR = '#hero';
     var HERO_CONTENT_SELECTOR = '.content';
+    var HERO_CONTENT_BUFFER = 10;
 
     var PORTFOLIO_SECTION_SELECTOR = '#portfolio';
     var PORTFOLIO_FILTERS_CONTAINER_SELECTOR = '.filters-container';
@@ -21,11 +22,29 @@
 
     $document.ready(function () {
 
+        initNavScrollTo();
+
         initHeroSectionContent();
 
         initPortfolioSectionContent();
 
     });
+
+    function initNavScrollTo() {
+        // taken from... https://css-tricks.com/snippets/jquery/smooth-scrolling/
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    }
 
     function initHeroSectionContent() {
         var $heroSection = $(HERO_SECTION_SELECTOR);
@@ -38,7 +57,7 @@
         function calculateAndSetContentPosition() {
             var heroSectionHeight = $heroSection.outerHeight();
             var heroContentHeight = $heroContent.outerHeight();
-            var heroContentPosition = ( heroSectionHeight / 2 ) - heroContentHeight;
+            var heroContentPosition = ( heroSectionHeight / 2 ) - heroContentHeight - HERO_CONTENT_BUFFER;
             $heroContent.css('top', heroContentPosition.toString() + 'px');
         }
 

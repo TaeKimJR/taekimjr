@@ -1,5 +1,6 @@
 @header-bold-font: 'Open Sans';
 @primary-color: #0B5D89;
+@secondary-color: #B03D3D;
 
 @standard-spacing: 3rem;
 
@@ -17,34 +18,32 @@ h1 {
 h2 {
   font-family: @header-bold-font, sans-serif;
   font-size: 2rem;
-  line-height: 38px;
   font-weight: 400;
 }
 
-a {
+a, a:visited, a:active, a:hover, a:focus {
   text-decoration: none;
-
-  &:hover {
-    text-decoration: none;
-  }
-
+  background-color: transparent;
 }
 
 section {
   position: relative;
   display: inline-block;
 
-  min-height: 100vh;
+  margin-bottom: 25rem;
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 25rem;
+
+  @media screen and (max-width: @container-sm) {  // bootstrap LESS variable
+    padding-top: 10rem;
+  }
 }
 
 .section-title {
   text-align: center;
 
-  margin: 0 auto @standard-spacing;
+  margin: 0 auto @standard-spacing*1.5;
   border-bottom: 2px solid @primary-color;
   max-width: 35rem;
 

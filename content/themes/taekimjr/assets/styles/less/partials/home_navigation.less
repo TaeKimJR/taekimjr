@@ -1,5 +1,5 @@
 @nav-bg-color: #454545;
-@nav-accent-color: #B03D3D;
+@nav-accent-color: @secondary-color;
 @nav-text-color: #737373;
 @nav-link-hover-color: #FFFFFF;
 @nav-menu-button-color: #FFFFFF;
@@ -28,7 +28,7 @@ nav {
     text-align: center;
 
     margin: 0 auto 1rem;
-    width: 30rem;
+    width: 45rem;
     padding: 0;
 
     @media screen and (max-width: @container-sm) {  // bootstrap LESS variable
@@ -42,12 +42,14 @@ nav {
 
       a {
         color: @nav-text-color;
+        background-color: transparent !important;
 
-        text-decoration: none;
+        &:focus {
+          color: @nav-text-color;
+        }
 
         &:hover {
           color: @nav-link-hover-color;
-          background-color: transparent !important;
         }
       }
 
