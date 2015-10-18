@@ -8,6 +8,8 @@
 
     var $document = $(document);
 
+    var SCROLL_OFFSET = 75;
+
     var HERO_SECTION_SELECTOR = '#hero';
     var HERO_CONTENT_SELECTOR = '.content';
     var HERO_CONTENT_BUFFER = 10;
@@ -31,14 +33,14 @@
     });
 
     function initNavScrollTo() {
-        // taken from... https://css-tricks.com/snippets/jquery/smooth-scrolling/
+        // taken from... https://css-tricks.com/snippets/jquery/smooth-scrolling/ ... with tweaks
         $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
                 if (target.length) {
                     $('html,body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: target.offset().top - SCROLL_OFFSET
                     }, 1000);
                     return false;
                 }

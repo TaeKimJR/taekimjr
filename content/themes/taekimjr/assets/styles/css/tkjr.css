@@ -6737,7 +6737,7 @@ section {
 }
 @media screen and (max-width: 750px) {
   section {
-    padding-top: 10rem;
+    margin-bottom: 10rem;
   }
 }
 .section-title {
