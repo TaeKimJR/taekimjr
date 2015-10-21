@@ -1,0 +1,22 @@
+.home-template {
+
+  section {
+    position: relative;
+
+    margin-bottom: 25rem;
+    min-height: 100vh;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: @container-sm) {  // bootstrap LESS variable
+      margin-bottom: 10rem;
+    }
+
+  }
+
+}

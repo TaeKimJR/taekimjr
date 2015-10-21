@@ -6727,31 +6727,35 @@ a:focus {
   text-decoration: none;
   background-color: transparent;
 }
-section {
+.section-title {
+  text-align: center;
+  margin: 0 auto 4.5rem;
+}
+.section-title h1 {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75rem;
+  font-size: 4rem;
+}
+.section-title hr {
+  border-top: 2px solid #0b5d89;
+  max-width: 35rem;
+}
+.home-template section {
   position: relative;
-  display: inline-block;
   margin-bottom: 25rem;
   min-height: 100vh;
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
 }
-section:last-child {
-  margin-bottom: 10rem;
+.home-template section:last-child {
+  margin-bottom: 0;
 }
 @media screen and (max-width: 750px) {
-  section {
+  .home-template section {
     margin-bottom: 10rem;
   }
-}
-.section-title {
-  text-align: center;
-  margin: 0 auto 4.5rem;
-  border-bottom: 2px solid #0b5d89;
-  max-width: 35rem;
-}
-.section-title h1 {
-  font-size: 4rem;
 }
 nav {
   position: fixed;
@@ -6905,37 +6909,53 @@ nav ul li a:hover {
     width: 100%;
   }
 }
-footer {
+footer#contact {
   height: 15rem;
   padding: 3rem;
   background-color: #0b5d89;
 }
-footer .social-links {
+footer#contact .social-links {
   text-align: center;
   max-width: 40rem;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 1.5rem;
 }
-footer .social-links a {
+footer#contact .social-links a {
   margin-right: 1rem;
   padding: .5rem;
 }
-footer .social-links a:last-child {
+footer#contact .social-links a:last-child {
   margin-right: 0;
 }
-footer .social-links a i {
+footer#contact .social-links a i {
   color: white;
   font-size: 3rem;
   transition: color 0.3s;
 }
-footer .contact-info {
+footer#contact .contact-info {
   text-align: center;
 }
-footer .contact-info a {
+footer#contact .contact-info a {
   color: white;
   letter-spacing: .2rem;
 }
-footer .contact-info a:hover {
+footer#contact .contact-info a:hover {
   text-decoration: underline;
+}
+article.post header {
+  padding-top: 10rem;
+  text-align: center;
+}
+article.post header img {
+  width: 20rem;
+}
+article.post header .section-title {
+  margin-bottom: 3rem;
+}
+article.post section.post-content {
+  min-height: 100vh;
+}
+article.post footer {
+  background-color: transparent;
 }
