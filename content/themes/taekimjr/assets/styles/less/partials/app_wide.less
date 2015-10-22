@@ -3,6 +3,7 @@
 @secondary-color: #B03D3D;
 
 @standard-spacing: 3rem;
+@side-padding: @standard-spacing;
 
 @max-container-width: 75rem;
 
@@ -34,8 +35,6 @@ a, a:visited, a:active, a:hover, a:focus {
   margin: 0 auto @standard-spacing*1.5;
 
   h1 {
-    .section-container();
-
     font-size: 4rem;
   }
 
@@ -50,4 +49,6 @@ a, a:visited, a:active, a:hover, a:focus {
   margin-right: auto;
   margin-left: auto;
   max-width: @max-container-width;
+  padding-left: @side-padding;
+  padding-right: @side-padding;
 }

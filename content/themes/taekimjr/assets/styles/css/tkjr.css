@@ -6433,10 +6433,12 @@ button.close {
 .panel-body:after,
 .modal-footer:before,
 .modal-footer:after,
-nav ul:before,
-nav ul:after,
-#portfolio .filters-container:before,
-#portfolio .filters-container:after {
+.home-template nav ul:before,
+.home-template nav ul:after,
+.home-template #portfolio .filters-container:before,
+.home-template #portfolio .filters-container:after,
+.post-template main.content footer:before,
+.post-template main.content footer:after {
   content: " ";
   display: table;
 }
@@ -6455,8 +6457,9 @@ nav ul:after,
 .pager:after,
 .panel-body:after,
 .modal-footer:after,
-nav ul:after,
-#portfolio .filters-container:after {
+.home-template nav ul:after,
+.home-template #portfolio .filters-container:after,
+.post-template main.content footer:after {
   clear: both;
 }
 .center-block {
@@ -6732,182 +6735,11 @@ a:focus {
   margin: 0 auto 4.5rem;
 }
 .section-title h1 {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 75rem;
   font-size: 4rem;
 }
 .section-title hr {
   border-top: 2px solid #0b5d89;
   max-width: 35rem;
-}
-.home-template section {
-  position: relative;
-  margin-bottom: 25rem;
-  min-height: 100vh;
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.home-template section:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 750px) {
-  .home-template section {
-    margin-bottom: 10rem;
-  }
-}
-nav {
-  position: fixed;
-  display: inline-block;
-  z-index: 1;
-  width: 100%;
-  border-top: 3px solid #b03d3d;
-  background-color: #454545;
-}
-nav button span {
-  color: #ffffff;
-}
-nav ul {
-  margin-left: -15px;
-  margin-right: -15px;
-  text-align: center;
-  margin: 0 auto 1rem;
-  width: 45rem;
-  padding: 0;
-}
-@media screen and (max-width: 750px) {
-  nav ul {
-    width: 100%;
-  }
-}
-nav ul li {
-  display: inline-block;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 768px) {
-  nav ul li {
-    float: left;
-    width: 33.33333333%;
-  }
-}
-nav ul li a {
-  color: #737373;
-  background-color: transparent !important;
-}
-nav ul li a:focus {
-  color: #737373;
-}
-nav ul li a:hover {
-  color: #ffffff;
-}
-#hero {
-  min-height: 100vh;
-  padding: 0;
-  background: linear-gradient(rgba(0, 91, 146, 0.58), rgba(0, 91, 146, 0.58)), url("../../images/hero_water_bg.jpeg") no-repeat center center fixed;
-  background-size: cover;
-}
-#hero .content {
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in;
-}
-#hero .content h1,
-#hero .content h2 {
-  color: #ffffff;
-}
-#portfolio .filters-container {
-  margin-left: -15px;
-  margin-right: -15px;
-  max-width: 50rem;
-  margin-bottom: 3rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-#portfolio .filters-container > div {
-  position: relative;
-  float: left;
-  width: 25%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: center;
-  border: 1px solid transparent;
-  padding: 0;
-  cursor: pointer;
-}
-#portfolio .filters-container > div:hover {
-  border: 1px solid black;
-}
-#portfolio .filters-container > div.active {
-  border: 1px solid black;
-}
-#portfolio .filters-container > div.no-border {
-  border: 1px solid transparent;
-}
-#portfolio .portfolio-container {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 75rem;
-  font-size: 0;
-}
-#portfolio .portfolio-container > div {
-  position: relative;
-  border: 2px solid white;
-  width: 50%;
-  background-color: #0b5d89;
-  font-size: 1rem;
-}
-#portfolio .portfolio-container > div .aspect-ratio {
-  margin-top: 100%;
-}
-#portfolio .portfolio-container .mix {
-  display: none;
-}
-#journal .articles-container {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 75rem;
-}
-#journal .articles-container article {
-  margin-bottom: 4.5rem;
-  font-size: 0;
-}
-#journal .articles-container article header {
-  display: inline-block;
-  margin-right: 2%;
-  width: 73%;
-  font-size: 1rem;
-}
-#journal .articles-container article header a {
-  color: black;
-}
-#journal .articles-container article header a:hover {
-  text-decoration: underline;
-}
-@media screen and (max-width: 750px) {
-  #journal .articles-container article header {
-    display: block;
-    width: 100%;
-  }
-}
-#journal .articles-container article .timestamp {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: .5%;
-  width: 25%;
-  font-size: 1.5rem;
-}
-@media screen and (max-width: 750px) {
-  #journal .articles-container article .timestamp {
-    display: block;
-    width: 100%;
-  }
 }
 footer#contact {
   height: 15rem;
@@ -6943,19 +6775,265 @@ footer#contact .contact-info a {
 footer#contact .contact-info a:hover {
   text-decoration: underline;
 }
-article.post header {
+.home-template section {
+  position: relative;
+  margin-bottom: 25rem;
+  min-height: 100vh;
+}
+.home-template section:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 750px) {
+  .home-template section {
+    min-height: 0;
+    margin-bottom: 10rem;
+  }
+  .home-template section:last-child {
+    margin-bottom: 10rem;
+  }
+}
+.home-template nav {
+  position: fixed;
+  display: inline-block;
+  z-index: 1;
+  width: 100%;
+  border-top: 3px solid #b03d3d;
+  background-color: #454545;
+}
+.home-template nav button span {
+  color: #ffffff;
+}
+.home-template nav ul {
+  margin-left: -15px;
+  margin-right: -15px;
+  text-align: center;
+  margin: 0 auto;
+  width: 45rem;
+  padding: 0;
+}
+@media screen and (max-width: 750px) {
+  .home-template nav ul {
+    width: 100%;
+  }
+}
+.home-template nav ul li {
+  display: inline-block;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .home-template nav ul li {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.home-template nav ul li a {
+  color: #737373;
+  background-color: transparent !important;
+}
+.home-template nav ul li a:focus {
+  color: #737373;
+}
+.home-template nav ul li a:hover {
+  color: #ffffff;
+}
+.home-template #hero {
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 0;
+  background: linear-gradient(rgba(0, 91, 146, 0.58), rgba(0, 91, 146, 0.58)), url("../../images/hero_water_bg.jpeg") no-repeat center center fixed;
+  background-size: cover;
+}
+.home-template #hero .content {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+.home-template #hero .content h1,
+.home-template #hero .content h2 {
+  color: #ffffff;
+}
+.home-template #portfolio {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.home-template #portfolio .filters-container {
+  margin-left: -15px;
+  margin-right: -15px;
+  max-width: 50rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-template #portfolio .filters-container > div {
+  position: relative;
+  float: left;
+  width: 25%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+  border: 1px solid transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.home-template #portfolio .filters-container > div:hover {
+  border: 1px solid black;
+}
+.home-template #portfolio .filters-container > div.active {
+  border: 1px solid black;
+}
+.home-template #portfolio .filters-container > div.no-border {
+  border: 1px solid transparent;
+}
+.home-template #portfolio .portfolio-container {
+  font-size: 0;
+}
+.home-template #portfolio .portfolio-container > div {
+  position: relative;
+  border: 2px solid white;
+  width: 50%;
+  background-color: #0b5d89;
+  font-size: 1rem;
+}
+.home-template #portfolio .portfolio-container > div .aspect-ratio {
+  margin-top: 100%;
+}
+.home-template #portfolio .portfolio-container .mix {
+  display: none;
+}
+.home-template #journal {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.home-template #journal .articles-container article {
+  margin-bottom: 4.5rem;
+  font-size: 0;
+}
+.home-template #journal .articles-container article header {
+  display: inline-block;
+  margin-right: 2%;
+  width: 73%;
+  font-size: 1rem;
+}
+.home-template #journal .articles-container article header a {
+  color: black;
+}
+.home-template #journal .articles-container article header a:hover {
+  text-decoration: underline;
+}
+@media screen and (max-width: 750px) {
+  .home-template #journal .articles-container article header {
+    display: block;
+    width: 100%;
+  }
+}
+.home-template #journal .articles-container article .timestamp {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: .5%;
+  width: 25%;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 750px) {
+  .home-template #journal .articles-container article .timestamp {
+    display: block;
+    width: 100%;
+  }
+}
+.post-template main.content {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.post-template main.content header {
+  margin-bottom: 5rem;
   padding-top: 10rem;
   text-align: center;
 }
-article.post header img {
+.post-template main.content header img {
   width: 20rem;
-}
-article.post header .section-title {
   margin-bottom: 3rem;
 }
-article.post section.post-content {
+.post-template main.content header .section-title {
+  margin-bottom: 3rem;
+}
+.post-template main.content section.post-content {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10rem;
+  max-width: 75rem;
   min-height: 100vh;
 }
-article.post footer {
-  background-color: transparent;
+.post-template main.content section.post-content p {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.post-template main.content footer {
+  margin-left: -15px;
+  margin-right: -15px;
+  border: 1px solid black;
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: 10rem;
+  padding: 2rem;
+}
+@media screen and (max-width: 750px) {
+  .post-template main.content footer {
+    text-align: center;
+  }
+  .post-template main.content footer figure img {
+    margin-bottom: 3rem;
+  }
+  .post-template main.content footer .bio {
+    margin-top: 0;
+  }
+}
+.post-template main.content footer figure {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .post-template main.content footer figure {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+.post-template main.content footer figure img {
+  border-radius: 50%;
+  border: 2px solid #0b5d89;
+  width: 20rem;
+  height: 20rem;
+}
+.post-template main.content footer .bio {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .post-template main.content footer .bio {
+    float: left;
+    width: 66.66666667%;
+  }
+}
+.post-template main.content footer .bio h4 {
+  margin-bottom: 10px;
+  font-size: 3rem;
 }

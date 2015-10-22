@@ -5,18 +5,24 @@
 
     margin-bottom: 25rem;
     min-height: 100vh;
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
 
     &:last-child {
       margin-bottom: 0;
     }
 
     @media screen and (max-width: @container-sm) {  // bootstrap LESS variable
+      min-height: 0;
       margin-bottom: 10rem;
+
+      &:last-child {
+        margin-bottom: 10rem;
+      }
     }
 
   }
 
+  @import "home/home_navigation.less";
+  @import "home/hero_section.less";
+  @import "home/portfolio_section.less";
+  @import "home/journal_section.less";
 }
