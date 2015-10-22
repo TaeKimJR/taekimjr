@@ -1,12 +1,24 @@
 #journal {
   .section-container();
 
+  .section-title {
+
+    @media screen and (max-width: @screen-xs-max) {   // bootstrap LESS variable
+      margin-bottom: @standard-spacing;
+    }
+
+  }
+
   .articles-container {
 
     article {
       margin-bottom: @standard-spacing * 1.5;
 
       font-size: 0;
+
+      @media screen and (max-width: @screen-xs-max) {   // bootstrap LESS variable
+        margin-bottom: @mobile-standard-spacing*2;
+      }
 
       header {
         display: inline-block;
@@ -24,7 +36,7 @@
           }
         }
 
-        @media screen and (max-width: @container-sm) {  // bootstrap LESS variable
+        @media screen and (max-width: @screen-xs-max) {  // bootstrap LESS variable
           display: block;
 
           width: 100%;
@@ -41,7 +53,7 @@
 
         font-size: 1.5rem;
 
-        @media screen and (max-width: @container-sm) {  // bootstrap LESS variable
+        @media screen and (max-width: @screen-xs-max) {  // bootstrap LESS variable
           display: block;
 
           width: 100%;

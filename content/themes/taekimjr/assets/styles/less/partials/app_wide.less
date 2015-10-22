@@ -3,7 +3,8 @@
 @secondary-color: #B03D3D;
 
 @standard-spacing: 3rem;
-@side-padding: @standard-spacing;
+@mobile-standard-spacing: 1rem;
+@side-padding: 3rem;
 
 @max-container-width: 75rem;
 
@@ -41,6 +42,17 @@ a, a:visited, a:active, a:hover, a:focus {
   hr {
     border-top: 2px solid @primary-color;
     max-width: 35rem;
+  }
+
+  @media screen and (max-width: @screen-xs-max) {   // bootstrap LESS variable
+
+    margin-bottom: @mobile-standard-spacing;
+
+    hr {
+      margin-bottom: @mobile-standard-spacing;
+      margin-top: @mobile-standard-spacing;
+    }
+
   }
 
 }
