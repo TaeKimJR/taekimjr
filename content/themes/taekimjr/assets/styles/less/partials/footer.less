@@ -21,10 +21,18 @@ footer#contact {
       }
 
       i {
+        padding: 1rem;
+
         color: white;
 
         font-size: 3rem;
         transition: color 0.3s;
+
+        &:hover {
+          background-color: white;
+          color: @primary-color;
+        }
+
       }
 
     }
@@ -35,12 +43,16 @@ footer#contact {
     text-align: center;
 
     a {
+      padding: 1rem;
+
       color: white;
+      transition: color 0.3s;
 
       letter-spacing: .2rem;
-
+      
       &:hover {
-        text-decoration: underline;
+        background-color: white;
+        color: @primary-color;
       }
     }
 

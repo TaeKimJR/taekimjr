@@ -6741,6 +6741,15 @@ a:focus {
   border-top: 2px solid #0b5d89;
   max-width: 35rem;
 }
+@media screen and (max-width: 767px) {
+  .section-title {
+    margin-bottom: 1rem;
+  }
+  .section-title hr {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}
 footer#contact {
   height: 15rem;
   padding: 3rem;
@@ -6761,19 +6770,27 @@ footer#contact .social-links a:last-child {
   margin-right: 0;
 }
 footer#contact .social-links a i {
+  padding: 1rem;
   color: white;
   font-size: 3rem;
   transition: color 0.3s;
+}
+footer#contact .social-links a i:hover {
+  background-color: white;
+  color: #0b5d89;
 }
 footer#contact .contact-info {
   text-align: center;
 }
 footer#contact .contact-info a {
+  padding: 1rem;
   color: white;
+  transition: color 0.3s;
   letter-spacing: .2rem;
 }
 footer#contact .contact-info a:hover {
-  text-decoration: underline;
+  background-color: white;
+  color: #0b5d89;
 }
 .home-template section {
   position: relative;
@@ -6783,7 +6800,7 @@ footer#contact .contact-info a:hover {
 .home-template section:last-child {
   margin-bottom: 0;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
   .home-template section {
     min-height: 0;
     margin-bottom: 10rem;
@@ -6811,7 +6828,7 @@ footer#contact .contact-info a:hover {
   width: 45rem;
   padding: 0;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
   .home-template nav ul {
     width: 100%;
   }
@@ -6916,9 +6933,19 @@ footer#contact .contact-info a:hover {
   padding-left: 3rem;
   padding-right: 3rem;
 }
+@media screen and (max-width: 767px) {
+  .home-template #journal .section-title {
+    margin-bottom: 3rem;
+  }
+}
 .home-template #journal .articles-container article {
   margin-bottom: 4.5rem;
   font-size: 0;
+}
+@media screen and (max-width: 767px) {
+  .home-template #journal .articles-container article {
+    margin-bottom: 2rem;
+  }
 }
 .home-template #journal .articles-container article header {
   display: inline-block;
@@ -6932,7 +6959,7 @@ footer#contact .contact-info a:hover {
 .home-template #journal .articles-container article header a:hover {
   text-decoration: underline;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
   .home-template #journal .articles-container article header {
     display: block;
     width: 100%;
@@ -6945,7 +6972,7 @@ footer#contact .contact-info a:hover {
   width: 25%;
   font-size: 1.5rem;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
   .home-template #journal .articles-container article .timestamp {
     display: block;
     width: 100%;
@@ -6990,7 +7017,7 @@ footer#contact .contact-info a:hover {
   margin-bottom: 10rem;
   padding: 2rem;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 767px) {
   .post-template main.content footer {
     text-align: center;
   }
