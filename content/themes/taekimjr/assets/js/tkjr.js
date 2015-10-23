@@ -10,6 +10,10 @@
 
     var SCROLL_OFFSET = 75;
 
+    var NAVIGATION_LINK_SELECTOR = 'nav a';
+    var MENU_BUTTON_SELECTOR = '.navbar-header button';
+    var MOBILE_SCREEN_WIDTH = 768;
+
     var HERO_SECTION_SELECTOR = '#hero';
     var HERO_CONTENT_SELECTOR = '.content';
     var HERO_CONTENT_BUFFER = 10;
@@ -25,6 +29,8 @@
     $document.ready(function () {
 
         initNavScrollTo();
+
+        initMobileNavButtonClick();
 
         initHeroSectionContent();
 
@@ -44,6 +50,17 @@
                     }, 1000);
                     return false;
                 }
+            }
+        });
+    }
+    
+    function initMobileNavButtonClick() {
+        var $navLinks = $(NAVIGATION_LINK_SELECTOR);
+        var $navMenuButton = $(MENU_BUTTON_SELECTOR);
+
+        $navLinks.click(function(){
+            if(window.innerWidth < MOBILE_SCREEN_WIDTH) {
+                $navMenuButton.click();
             }
         });
     }
@@ -77,7 +94,7 @@
     function initPortfolioSectionContent() {
         var $portfolioSection = $(PORTFOLIO_SECTION_SELECTOR);
         var $portfolioFiltersContainer = $portfolioSection.find(PORTFOLIO_FILTERS_CONTAINER_SELECTOR);
-        var $porfolioFilters = $portfolioFiltersContainer.find(PORTFOLIO_FILTER_SELECTOR);
+        var $portfolioFilters = $portfolioFiltersContainer.find(PORTFOLIO_FILTER_SELECTOR);
         var $portfolioContentContainer = $portfolioSection.find(PORTFOLIO_CONTENT_CONTAINER_SELECTOR);
 
         initMixItUpPlugin();
@@ -88,18 +105,18 @@
         }
 
         function setupFiltersOnHoverEvent() {
-            $porfolioFilters.hover(
+            $portfolioFilters.hover(
                 function() {    // hover in
                     var $hoveredFilter = $(this);
                     var isActive = $hoveredFilter.hasClass(ACTIVE_FILTER_CLASS);
                     if(!isActive){
-                        var $activeFilter = $porfolioFilters.filter(ACTIVE_FILTER_SELECTOR);
+                        var $activeFilter = $portfolioFilters.filter(ACTIVE_FILTER_SELECTOR);
                         $activeFilter.addClass(NO_BORDER_FILTER_CLASS);
                     }
                 },
 
                 function() {    // hover out
-                    $porfolioFilters.removeClass(NO_BORDER_FILTER_CLASS);
+                    $portfolioFilters.removeClass(NO_BORDER_FILTER_CLASS);
                 }
             );
         }

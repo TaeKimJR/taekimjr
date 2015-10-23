@@ -2,17 +2,36 @@
 @hero-text-color: #FFF;
 
 #hero {
+  position: relative;
+  overflow: hidden;
+
   max-width: 100%;
   min-height: 100vh;
   padding: 0;
 
-  background:
-  linear-gradient(
-          rgba(0, 91, 146, 0.58),
-          rgba(0, 91, 146, 0.58)
-  ),
-  @hero-bg-image no-repeat center center fixed;
-  background-size: cover;
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+
+    content: @hero-bg-image;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+
+    background-color: rgba(0, 91, 146, 0.58);
+  }
 
   .content {
     position: absolute;
