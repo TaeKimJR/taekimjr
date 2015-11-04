@@ -7012,6 +7012,7 @@ footer#contact .contact-info a:hover {
 .home-template #journal .articles-container article .timestamp {
   display: inline-block;
   vertical-align: top;
+  text-align: right;
   margin-top: .5%;
   width: 25%;
   font-size: 1.5rem;
@@ -7019,6 +7020,7 @@ footer#contact .contact-info a:hover {
 @media screen and (max-width: 767px) {
   .home-template #journal .articles-container article .timestamp {
     display: block;
+    text-align: left;
     width: 100%;
   }
 }
