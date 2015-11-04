@@ -6729,6 +6729,7 @@ a:hover,
 a:focus {
   text-decoration: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .section-title {
   text-align: center;
@@ -7020,6 +7021,20 @@ footer#contact .contact-info a:hover {
     display: block;
     width: 100%;
   }
+}
+.home-template #journal .hidden-articles-container {
+  display: none;
+}
+.home-template #journal .more-articles {
+  margin-top: 3rem;
+  text-align: center;
+}
+.home-template #journal .more-articles a {
+  display: none;
+  font-size: 2rem;
+}
+.home-template #journal .more-articles .prev {
+  margin-right: 2rem;
 }
 .post-template main.content {
   margin-right: auto;

@@ -2,9 +2,7 @@
 {{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
 
 {{! The posts listing (grabbed via jQuery load in home.hbs }}
-<main id="content" class="content" role="main">
-
-    {{! The tag below includes the post loop - partials/loop.hbs }}
-    {{> "loop"}}
-
-</main>
+<div id="article-content">
+  {{! The tag below includes the post loop - partials/loop.hbs }}
+  {{> "loop"}}
+</div>

@@ -5,8 +5,16 @@
 	</div>
 
   <div class="articles-container">
-    {{! The tag below includes the post loop - partials/loop.hbs }}
-    {{> "loop"}}
+    <div id="article-content">
+      {{! The tag below includes the post loop - partials/loop.hbs }}
+      {{> "loop"}}
+    </div>
+  </div>
+  <div class="hidden-articles-container"></div>
+
+  <div class="more-articles">
+		<a class="prev glyphicon glyphicon-chevron-up"></a>
+    <a class="next glyphicon glyphicon-chevron-down"></a>
   </div>
 
 </section>
